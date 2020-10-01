@@ -3,7 +3,6 @@ package com.threatfabric.threaddetectionapi.controllers;
 import com.threatfabric.threaddetectionapi.exceptions.ResourceNotFoundException;
 import com.threatfabric.threaddetectionapi.services.DetectionService;
 import com.threatfabric.threaddetectionapi.specification.DetectionInfoSpecificationsBuilder;
-import com.threatfabric.threaddetectionapi.specification.SearchCriteria;
 import com.threatfabric.threaddetectionapi.v1.mapper.DetectionMapper;
 import com.threatfabric.threaddetectionapi.v1.model.DetectionDTO;
 import com.threatfabric.threaddetectionapi.v1.model.DetectionInfo;
@@ -20,7 +19,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

@@ -55,6 +55,20 @@ class DetectionITTest {
     }
 
     @Test
+    void getAllWithPredicate2() {
+        DetectionDTO[] detectionDTOs = restTemplate.getForObject(DETECTION_BASE_URL +
+                "/all?nameOfApp=appName&typeOfApp=appType", DetectionDTO[].class);
+        assertThat(detectionDTOs).hasSize(1);
+    }
+
+    @Test
+    void getAllWithPredicate3() {
+        DetectionDTO[] detectionDTOs = restTemplate.getForObject(DETECTION_BASE_URL +
+                "/all?nameOfApp=appName&typeOfApp=appType1", DetectionDTO[].class);
+        assertThat(detectionDTOs).hasSize(0);
+    }
+
+    @Test
     void validationTest() {
 
         DetectionDTO detectionDTO = new DetectionDTO();
